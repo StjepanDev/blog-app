@@ -13,7 +13,12 @@ import { MatInputModule } from '@angular/material/input';
 import { HomeComponent } from './pages/home/home.component';
 import { CreateBlogComponent } from './pages/create-blog/create-blog.component'; 
 
-import { QuillModule } from 'ngx-quill'
+import { HttpClientModule} from '@angular/common/http';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { FormsModule } from '@angular/forms';
+
+
+
 
 @NgModule({
   declarations: [
@@ -23,13 +28,15 @@ import { QuillModule } from 'ngx-quill'
     CreateBlogComponent
   ],
   imports: [
-    QuillModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    AngularEditorModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
