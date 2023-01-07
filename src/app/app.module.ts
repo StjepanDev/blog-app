@@ -16,6 +16,7 @@ import { CreateBlogComponent } from './pages/create-blog/create-blog.component';
 import { HttpClientModule} from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { FormsModule } from '@angular/forms';
+import { ViewBlogComponent } from './pages/view-blog/view-blog.component';
 
 
 
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     TopbarComponent,
     HomeComponent,
-    CreateBlogComponent
+    CreateBlogComponent,
+    ViewBlogComponent
   ],
   imports: [
     BrowserModule,

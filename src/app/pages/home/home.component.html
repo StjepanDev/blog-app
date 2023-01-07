@@ -1,34 +1,11 @@
-
 <div class="container">
     <div class="content-wrapper">
         <button routerLink="/create" class="create-button" mat-button>Create Blog</button>
-        <div class="card">
-            <div class="title">Title</div>
-            <div class="author">Written by</div>
-            <div class="content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quisquam provident, sapiente cumque error eum dicta accusamus iste, aliquam eveniet officiis? Animi optio a blanditiis nisi quisquam voluptatem dicta itaque.
-            </div>
+
+        <div [routerLink]="'/view/' + i" class="card" *ngFor="let blog of blogService.blogsData;let i = index">
+            <div class="title">{{blog.title}}</div>
+            <div class="author">Written by {{blog.author}}</div>
         </div>
-        <div class="card">
-            <div class="title">Title</div>
-            <div class="author">Written by</div>
-            <div class="content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quisquam provident, sapiente cumque error eum dicta accusamus iste, aliquam eveniet officiis? Animi optio a blanditiis nisi quisquam voluptatem dicta itaque.
-            </div>
-        </div>
-        <div class="card">
-            <div class="title">Title</div>
-            <div class="author">Written by</div>
-            <div class="content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quisquam provident, sapiente cumque error eum dicta accusamus iste, aliquam eveniet officiis? Animi optio a blanditiis nisi quisquam voluptatem dicta itaque.
-            </div>
-        </div>
-        <div class="card">
-            <div class="title">Title</div>
-            <div class="author">Written by</div>
-            <div class="content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quisquam provident, sapiente cumque error eum dicta accusamus iste, aliquam eveniet officiis? Animi optio a blanditiis nisi quisquam voluptatem dicta itaque.
-            </div>
-        </div>
+
     </div>
 </div>
